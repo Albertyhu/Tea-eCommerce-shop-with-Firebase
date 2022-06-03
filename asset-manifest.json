@@ -1,25 +1,46 @@
 {
   "files": {
-    "main.css": "/tea-eCommerce-shop/static/css/main.0acc0fa1.css",
-    "main.js": "/tea-eCommerce-shop/static/js/main.7d936a09.js",
+    "main.css": "/tea-eCommerce-shop/static/css/main.7a97bded.css",
+    "main.js": "/tea-eCommerce-shop/static/js/main.be48da27.js",
+    "static/media/jasmine_tea_pouring.jpg": "/tea-eCommerce-shop/static/media/jasmine_tea_pouring.e8ddbf09306935fd070c.jpg",
     "static/media/Tea_chinese_character.png": "/tea-eCommerce-shop/static/media/Tea_chinese_character.3a767468176d61fc6dba.png",
+    "static/media/green-tea-leaves-collection.jpg": "/tea-eCommerce-shop/static/media/green-tea-leaves-collection.982ae75b7709a6c2d732.jpg",
     "static/media/black_tea.jpg": "/tea-eCommerce-shop/static/media/black_tea.d42f4232f10eb28e55f1.jpg",
+    "static/media/ginseng_tea_cup.jpg": "/tea-eCommerce-shop/static/media/ginseng_tea_cup.e730aeab8485e2b560da.jpg",
+    "static/media/jasmine_tea_cup.jpg": "/tea-eCommerce-shop/static/media/jasmine_tea_cup.3a734bc36e4961c6da7f.jpg",
     "static/media/jasmine_tea.jpg": "/tea-eCommerce-shop/static/media/jasmine_tea.65c5181c4607d346fea6.jpg",
     "static/media/green_tea.jpg": "/tea-eCommerce-shop/static/media/green_tea.cd2df664d864674350eb.jpg",
     "static/media/pouring_tea.jpg": "/tea-eCommerce-shop/static/media/pouring_tea.e93c6a1136ed400f2986.jpg",
+    "static/media/jasmine_tea_flower.jpg": "/tea-eCommerce-shop/static/media/jasmine_tea_flower.2ab5ac5a29a7c9ba513b.jpg",
+    "static/media/LongjinTea_raw.jpeg": "/tea-eCommerce-shop/static/media/LongjinTea_raw.996bb2c14bef4db4fc77.jpeg",
+    "static/media/iron_buddha_tea_cup.jpg": "/tea-eCommerce-shop/static/media/iron_buddha_tea_cup.c125bc6f89fcf94ab2c8.jpg",
     "static/media/Earth Tone.png": "/tea-eCommerce-shop/static/media/Earth Tone.86eab3599e1753cb1918.png",
+    "static/media/LongjinTea_leaves.jpg": "/tea-eCommerce-shop/static/media/LongjinTea_leaves.422b5cf02f3c1ca7edd2.jpg",
     "static/media/Earth Tone-black-transparent.png": "/tea-eCommerce-shop/static/media/Earth Tone-black-transparent.de969f7d8e032cdf5484.png",
+    "static/media/oolong_tea_dish.jpg": "/tea-eCommerce-shop/static/media/oolong_tea_dish.43eafc07f7f546e1a5b2.jpg",
+    "static/media/oolong_tea_cup.jpg": "/tea-eCommerce-shop/static/media/oolong_tea_cup.9e99912d1647cce7dbe0.jpg",
+    "static/media/black-tea-leaves.jpg": "/tea-eCommerce-shop/static/media/black-tea-leaves.c1ecfe476bf89a328085.jpg",
+    "static/media/oolong_tea_leaves.jpg": "/tea-eCommerce-shop/static/media/oolong_tea_leaves.d468353de49aee7c77a7.jpg",
+    "static/media/green_tea_cup.jpg": "/tea-eCommerce-shop/static/media/green_tea_cup.cd1921e3aadddeffaadb.jpg",
     "static/media/oolong_tea.jpg": "/tea-eCommerce-shop/static/media/oolong_tea.3002187cbd412bce2749.jpg",
+    "static/media/ginseng_tea_root.jpg": "/tea-eCommerce-shop/static/media/ginseng_tea_root.8d1016e1e0110e314578.jpg",
+    "static/media/green-tea-leaves-raw.jpg": "/tea-eCommerce-shop/static/media/green-tea-leaves-raw.6b686fe9576ffe5461e7.jpg",
+    "static/media/ginseng_tea_cup2.jpg": "/tea-eCommerce-shop/static/media/ginseng_tea_cup2.deddcce23426388d94ad.jpg",
     "static/media/Iron_buddha_tea.jpg": "/tea-eCommerce-shop/static/media/Iron_buddha_tea.181ba9b42c42b696e648.jpg",
+    "static/media/iron_buddha_tea_leaves.jpg": "/tea-eCommerce-shop/static/media/iron_buddha_tea_leaves.657f4dba486646f02f42.jpg",
+    "static/media/black-tea-cup.jpg": "/tea-eCommerce-shop/static/media/black-tea-cup.fcb77526cc97481fab08.jpg",
+    "static/media/LongjinTea_cup.jpg": "/tea-eCommerce-shop/static/media/LongjinTea_cup.8476f1f95b5ba76aefa5.jpg",
     "static/media/LongjinTea.jpg": "/tea-eCommerce-shop/static/media/LongjinTea.ebc9981db0a5abf0ffcd.jpg",
+    "static/media/black-tea-cups.jpg": "/tea-eCommerce-shop/static/media/black-tea-cups.a8933d0c86a0c29515b9.jpg",
+    "static/media/iron_buddha_tea_leaves-raw.jpg": "/tea-eCommerce-shop/static/media/iron_buddha_tea_leaves-raw.d8a948e7aeea94b491c0.jpg",
     "static/media/shopping-cart-white.png": "/tea-eCommerce-shop/static/media/shopping-cart-white.5752303e8451202bb6df.png",
     "static/media/ginseng_tea.jpg": "/tea-eCommerce-shop/static/media/ginseng_tea.d3192b02b3cd1cf45497.jpg",
     "index.html": "/tea-eCommerce-shop/index.html",
-    "main.0acc0fa1.css.map": "/tea-eCommerce-shop/static/css/main.0acc0fa1.css.map",
-    "main.7d936a09.js.map": "/tea-eCommerce-shop/static/js/main.7d936a09.js.map"
+    "main.7a97bded.css.map": "/tea-eCommerce-shop/static/css/main.7a97bded.css.map",
+    "main.be48da27.js.map": "/tea-eCommerce-shop/static/js/main.be48da27.js.map"
   },
   "entrypoints": [
-    "static/css/main.0acc0fa1.css",
-    "static/js/main.7d936a09.js"
+    "static/css/main.7a97bded.css",
+    "static/js/main.be48da27.js"
   ]
 }
