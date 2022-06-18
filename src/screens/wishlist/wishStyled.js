@@ -29,10 +29,23 @@ export const Shell = styled.div`
     &#rightPanel{
         width: 20%;
     }
+@media screen and (max-widtH: 540px){
+    width: 95%;
+    &#rightPanel{
+        width: 95%;
+        margin-top: 20px;
+    }
+
+}
+
+
 `
 
 export const OuterShell = styled.div`
     display: flex;
+@media screen and (max-widtH: 540px){
+    display: block;
+}
 `
 
 export const CheckOutContainer = styled.div`
@@ -76,7 +89,20 @@ export const DetailTable = styled.table`
 &#WishDetailTable{
     margin-left: 50px;
 }
+@media screen and (max-widtH: 540px){
+&#WishDetailTable{
+    margin-left: 0px;
+}
 
+ & > tbody tr th {
+    min-width: fit-content;
+}
+
+& > tbody tr td{
+    text-align: center;
+}
+
+}
 `
 
 export const TH = styled.th`
@@ -174,5 +200,9 @@ export const TanButton = styled.div`
 &:active{
     background-color: #D19C4C;
     transform: translate(4px, 4px)
+}
+
+@media screen and (max-widtH: 540px){
+width: 80%;
 }
 `

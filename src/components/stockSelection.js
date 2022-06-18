@@ -12,7 +12,7 @@ const RenderStockSelection = props => {
         handleCustomSubmit,
         setDisplayCustomStock,
     } = props 
-
+    
     const initialQuan = customQuan <= 10 ? quantity : customQuan; 
 
     useEffect(() => {
@@ -25,8 +25,9 @@ const RenderStockSelection = props => {
         if (quantity === "custom") {
             setDisplayCustomStock(true)
         }
-        else
-            setDisplayCustomStock(false)    
+        else {
+            setDisplayCustomStock(false)
+        }
     }, [quantity])
 
     return (

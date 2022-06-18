@@ -44,7 +44,7 @@ export const SubCont = styled.div`
 @media screen and (max-width: 540px){
     display: block;
     & > div, div#stateContainer{
-     width: 100%;
+     width: 90%;
     }
 }
 

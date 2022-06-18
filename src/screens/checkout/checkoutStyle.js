@@ -20,6 +20,9 @@ export const InnerContainer = styled.div`
 `
 export const OuterShell = styled.div`
     display: flex;
+@media screen and (max-width: 540px){
+    display: block;
+}
 `
 
 export const Shell = styled.div`
@@ -32,6 +35,14 @@ export const Shell = styled.div`
     &#rightPanel{
         width: 20%;
     }
+@media screen and (max-width: 540px){
+    width: 95%;
+
+    &#rightPanel{
+        width: 95%;
+        margin-top: 20px;
+    }
+}
 `
 
 export const CheckOutContainer = styled.div`
@@ -49,6 +60,9 @@ export const ListItem = styled.div`
     margin-bottom: 20px;
     text-align: left;
     cursor: pointer; 
+@media screen and (max-width: 540px){
+    text-align: center;
+}
 `
 export const ListDetails = styled.div`
     margin-left: auto;
@@ -70,7 +84,28 @@ export const DetailTable = styled.table`
 & > tbody tr td{
    min-width: 120px;
 }
+@media only screen and (max-width: 540px) {
+text-align: center;
+    thead th:not(:first-child) {
+        display: none;
+    }
+    & > tbody{
+        text-align: center;
+    }
+    td, th {
+        display: block; 
+        text-align: center;
+        margin-bottom: 10px;
+        min-width: auto;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
+    td[data-th]:before  {
+        content: attr(data-th);
+    }
+}
 `
 
 export const TH = styled.th`
@@ -106,12 +141,18 @@ export const SecondaryLinks = styled.span`
         color: #6d6d6d; 
         text-decoration: none; 
 }
+
+
 `
 export const TDseparator = styled.td`
     border-left: 1px solid #a1a1a1; 
     width: 100px;
     padding: auto;
     text-align: center;
+@media screen and (max-width: 540px){
+        border: none;
+        margin-top: 10px;
+}
 `
 export const ContinueButton = styled.div``
 

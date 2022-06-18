@@ -3,13 +3,13 @@ import { MyContext } from './contextItem.js';
 import styled from 'styled-components'; 
 
 export const RenderSubtotal= props => {
-    const { calculateTotalCost, calculateTotalItems } = useContext(MyContext); 
+    const { calculateTotalCost, calculateTotalItems, cart } = useContext(MyContext); 
     const [totalItems, setTotalItems] = useState(calculateTotalItems())
     const [subtotal, setSubtotal] = useState(calculateTotalCost()); 
 
     //isCheckout determines whether the prices to be displayed is at the shopping cart or at checkout
     //This is a necessary prop to render this component
-    const { changeTotal, shippingFee, salesTax, ck_setFinalCost, isCheckout } = props; 
+    const { changeTotal, shippingFee, salesTax, ck_setFinalCost, isCheckout, toggle } = props; 
     const [totalBeforeTax, setTotalBeforeTax] = useState(0);
     const [estimatedTaxes, setEstimatedTaxes] = useState(0)
     const [finalCost, setFinalCost] = useState(0)
@@ -47,6 +47,11 @@ export const RenderSubtotal= props => {
             ck_setFinalCost(total)
         }
     }, [estimatedTaxes])
+
+    useEffect(() => {
+        console.log("recalculate")
+        recalculate()
+    }, [cart])
 
     return (
         <Container>

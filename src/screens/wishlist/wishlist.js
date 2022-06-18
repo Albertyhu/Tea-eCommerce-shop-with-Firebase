@@ -39,7 +39,7 @@ const RenderWishList = props => {
 const MainContent = (props) => {
     const { wishlist } = props; 
     const { removeWish } = React.useContext(MyContext);
-    const { setUnitForMeasure } = React.useContext(PageTemplateContext)
+    const { setUnitForMeasure, makePageAuto, makePageInherit } = React.useContext(PageTemplateContext)
     const LoadWishes = () => {
         var arr = TeaData.filter(val => {
             return wishlist.some(wish => wish === val.ID)
@@ -61,9 +61,31 @@ const MainContent = (props) => {
     //This is to prevent the footer from being positioned in the middle of the screen.
     //If there are more than one items displayed on the screen, set height of <InnerContainer> to auto
     //...so that the last product at the bottom doesn't overlap the footer. 
+
+    const resizeEvent = () => {
+        if (wishlist !== null && wishlist.length > 0) {
+            if (window.innerWidth <= 540) {
+                makePageAuto()
+            }
+            else {
+                makePageInherit()
+            }
+        }
+        else {
+            makePageInherit();
+        }
+    }
+
+    document.addEventListener('resize', resizeEvent)
+
     useEffect(() => {
-        setUnitForMeasure(wishlist);
-      }, [wishlist])
+        resizeEvent();
+    }, [wishlist])
+
+
+    useEffect(() => {
+        return () => { document.removeEventListener('resize', resizeEvent)}
+    }, [])
 
     return (<div id = "wishlistDiv">
     {

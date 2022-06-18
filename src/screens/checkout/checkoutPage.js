@@ -234,7 +234,7 @@ const MainContent = props => {
         <SecondInnerCont opacityVal={processingIndicator ? 0.3 : 1.0 }>
             <h1>Checkout</h1>
             {checkoutList !== null && checkoutList.length !== 0 ?
-                <OuterShell>
+                <OuterShell id = "checkout_outershell">
                     <Shell>
                         {!editShipping ?
                             <RenderAddress
@@ -252,8 +252,8 @@ const MainContent = props => {
                                 submitEvent={OpenEditBillingDiv}
                                 title="Billing Address" />
                             :
-                            <RenderAddress
-                                data={getBillingAdd()}
+                            <RenderShippingForm
+                                initialData={getBillingAdd()}
                                 submitEvent={UpdateBilling}
                                 title="Update Billing Address" />
                         }

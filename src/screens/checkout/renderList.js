@@ -1,4 +1,4 @@
-import React, { useState, useContext, useCallback } from 'react'; 
+import React, { useState, useContext, useCallback, useEffect } from 'react'; 
 import RenderStockSelection from '../../components/stockSelection.js'; 
 import {
     ListItem,
@@ -31,12 +31,15 @@ const RenderList = props => {
         stock,
         refreshList, 
         removeItem, 
+        updateCartList, 
+        updateSubtotal 
     } = props; 
-
+    
     const [quantity, setQuan] = useState(stock); 
+
     const [customQuan, setCustomQuan] = useState(0); 
     const [displayCustomStock, setDisplayCustomStock] = useState(false);
-    const { removeFromCart, setWish } = useContext(MyContext)
+    const { removeFromCart, setWish, updateProductStockInCart } = useContext(MyContext)
     const navigate = useNavigate(); 
     const handleCustomStock = event => {
         let regex = /[^0-9]/g
@@ -47,11 +50,17 @@ const RenderList = props => {
 
     const handleStockChange = event => {
         setQuan(event.target.value)
+        if (event.target.value !== "custom") {
+            updateCartList(ID, parseInt(event.target.value));
+            updateSubtotal(ID, parseInt(event.target.value), price)
+        }
     }
 
     const handleCustomSubmit = () => {
-        setQuan(customQuan);
+        setQuan(parseInt(customQuan));
         setDisplayCustomStock(false);
+        updateCartList(ID, parseInt(customQuan));
+        updateSubtotal(ID, parseInt(customQuan), price)
     }
 
     const moveToWishList = () => {
@@ -60,6 +69,8 @@ const RenderList = props => {
         setWish(ID);
     }
 
+
+
     const goProductProfile = useCallback(() => navigate('../product_profile', {
         replace: true, 
         state: {
@@ -67,6 +78,17 @@ const RenderList = props => {
         }
     }), [navigate])
 
+    //If the stock gets update with the RenderSelection component, it immediately updates the cart 
+    const updateCart = () => {
+        updateProductStockInCart(ID, quantity)
+    }
+
+    
+    useEffect(() => {
+        if (quantity !== "custom") {
+            updateCart()
+        }
+    }, [quantity])
 
 
     return (

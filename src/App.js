@@ -125,8 +125,22 @@ function App() {
         clearCart: () => {
             setCart([]); 
         },
-        updateCart: () => { },
-        updateItemInCart: () => { }, 
+        updateCart: (newCart) => { setCart(newCart) },
+        updateProductStockInCart: (productID, newStock) => {
+            var arr = null; 
+            if (newStock !== 0) {
+                arr = cart; 
+                arr.forEach(val => {
+                    if (val.ID === productID) {
+                        val.stock = newStock; 
+                    }
+                })
+            }
+            else {
+                arr = cart.filter(val => val.ID !== productID)
+            }
+            setCart(arr); 
+        },
         getCart: () => { return cart },
         toggleCartPanel: () => {
             setOpenPanel(!openPanel); 

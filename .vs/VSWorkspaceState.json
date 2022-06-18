@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\base_elements",
-    "\\src\\base_elements\\footerSections",
-    "\\src\\firebase",
+    "\\src\\components",
     "\\src\\screens",
-    "\\src\\screens\\checkout",
+    "\\src\\screens\\cart",
     "\\src\\screens\\nonMember",
     "\\src\\screens\\policy_statement",
+    "\\src\\screens\\shipping",
+    "\\src\\screens\\wishlist",
     "\\src\\style"
   ],
-  "SelectedNode": "\\src\\base_elements\\SecondaryHeaderBar.js",
+  "SelectedNode": "\\src\\screens\\cart\\renderTotal.js",
   "PreviewInSolutionExplorer": false
 }
