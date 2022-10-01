@@ -29,6 +29,7 @@ const ProductProfile = props => {
 
     const { getProductReviewCol } = useContext(MyContext)
 
+
     return (<PageTemplate MainContent={MainContent}
         openHamburger={openHamburger}
         openPanel={openPanel}
@@ -44,7 +45,7 @@ const MainContent = props => {
     const navigate = useNavigate();
     const goHome = useCallback(() => navigate('../tea-eCommerce-shop', { replace: true }), [navigate]);
 
-    const { getProductID, makePageAuto, makePageInherit, getData } = useContext(PageTemplateContext)
+    const { ProductProfileID, getProductID, makePageAuto, makePageInherit, getData } = useContext(PageTemplateContext)
 
     //Acquire reviews of all products 
     const review = getData();
@@ -75,6 +76,12 @@ const MainContent = props => {
             makePageAuto();
         }
     }, [review])
+
+
+    useEffect(() => {
+       // console.log(`current id: ${ProductProfileID}`)
+        setProductID(ProductProfileID)
+    }, [ProductProfileID])
   
     return (
         <SecondInnerCont>

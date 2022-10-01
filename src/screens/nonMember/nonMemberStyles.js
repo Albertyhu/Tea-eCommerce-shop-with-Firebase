@@ -58,13 +58,14 @@ export const OuterShell = styled.div`
     width: 60%;
     margin-left: auto;
     margin-right: auto;
-    height: inherit;
+    height: auto;
     align-items: center;
     align-content: center;
     font-family: inherit;
     border: 1px solid rgba(0,0,0, .3); 
     border-radius: 5px; 
     margin-bottom: 20px;
+
    @media screen and (max-width: 540px) {
         width: 90%;
         height: 90%;

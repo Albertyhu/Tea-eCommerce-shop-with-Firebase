@@ -13,8 +13,17 @@ const firebaseConfig = {
     appId: "1:411802201460:web:382b8dab5f84fbc5f91021"
 };
 
+export const getFirebaseConfig = () =>{
+    if (!firebaseConfig || !firebaseConfig.apiKey) {
+    throw new Error('No Firebase configuration object provided.' + '\n' +
+        'Add your web app\'s configuration object to firebase-config.js');
+} else {
+        return firebaseConfig;
+    }
+}
+
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig);
 
 const db = getFirestore(); 
 export { db }; 

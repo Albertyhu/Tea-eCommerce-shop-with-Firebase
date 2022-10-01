@@ -281,6 +281,20 @@ export const WhiteButton = styled.div`
     background-color: #ffffff;
     color: #000000; 
 }
+&#CareerPageSubmit{
+margin-top: 20px; 
+width: fit-content;
+padding-left: 15px;
+padding-right: 15px;
+
+}
+
+&#CareerPageSubmit:active{
+    transition-duration: 300ms;
+    transform: translate(4px, 4px);
+    background-color: #ffffff;
+    color: #000000; 
+}
 
 `
 

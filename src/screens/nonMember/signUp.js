@@ -24,7 +24,7 @@ import { Bounce } from "react-activity";
 import "react-activity/dist/library.css";
 import RenderPanels from '../../components/renderPanels.js'; 
 import styled from 'styled-components'; 
-
+import SignInWGoogle from './signInWGoogle.js'; 
 //firebase 
 import { getAuth, createUserWithEmailAndPassword} from 'firebase/auth'
 import firebase from 'firebase/compat/app'
@@ -165,10 +165,6 @@ const SignUp = props => {
         }
     }, [confirmPass])
 
-    useEffect(() => {
-        console.log(termsConfirm)
-    }, [termsConfirm])
-
     const toggleTerms = () => {
         setTermsConfirm(!termsConfirm)
     }
@@ -191,18 +187,18 @@ const SignUp = props => {
 
 
     return (
-        <MainContainer>
+        <MainContainer id="SignUp-MainContainer">
             <RenderPanels
                 burgerTrigger={openHamburger}
                 cartTrigger={openPanel}
                 accountTrigger={accountPanel}
             />
             <Header />
-            <OuterShell>
-                <InnerShell loading={loading}>
+            <OuterShell id="SignUp-OuterShell">
+                <InnerShell loading={loading} id = "SignUp-InnerShell">
                         <h1>Create a New Account</h1>
 
-                        <InputDiv>
+                    <InputDiv id="SignUp-InputDiv">
                             <SubTitle>First Name </SubTitle>
                             <InputContainer>
                                 <InputField
@@ -279,6 +275,8 @@ const SignUp = props => {
                         <SubscriptionRequest />
                     </CheckBoxMainCont>
                     <SubmitButton onClick={handleSubmit}>Sign Up</SubmitButton>
+                    <h2>Or Sign In With Google</h2>
+                    <SignInWGoogle />
                     <h2>Already have an account with us?</h2>
                     <Button2 onClick={goSignIn}>Sign In</Button2>
 

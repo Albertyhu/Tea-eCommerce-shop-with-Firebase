@@ -42,7 +42,7 @@ const PageTemplate = props => {
     }, [])
 
     const context = {
-
+        ProductProfileID, 
         //The following is to make sure that the footer stays in the right position by controlling the value of the height of <InnerContainer> 
         changeInnerContHeight: (val) => setInnerContHeight(val),
         setUnitForMeasure: data => { setArrData(data) },

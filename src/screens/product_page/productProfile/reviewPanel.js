@@ -2,14 +2,17 @@ import React from 'react';
 import styled from 'styled-components'; 
 import RenderRatings from '../../../components/rating/renderRatings.js'; 
 import { MdPersonPin } from 'react-icons/md';
-
+import uuid from 'react-uuid'
 const ReviewPanel = props => {
     const { data, productID } = props; 
     var reviews = data.filter(val => val.ID === productID); 
     return (
         <Panel>
             {reviews !== null && reviews.length != 0 ? <h3>Reviews about this product</h3> : null}
-            {reviews ? reviews.map(val => <ReviewBlock {...val} />) : null}
+            {reviews ? reviews.map(val => <ReviewBlock
+                {...val}
+                key={uuid()}
+            />) : null}
         </Panel>
         )
 

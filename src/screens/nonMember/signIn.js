@@ -2,6 +2,7 @@ import React, {useState, useCallback, useEffect, useContext} from 'react'
 import { Link, useNavigate } from "react-router-dom"; 
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'; 
 import styled from 'styled-components'; 
+import SignInWGoogle from './signInWGoogle.js';
 import {
     InputField,
     InputContainer,
@@ -143,6 +144,8 @@ const SignIn = props => {
                         </InputContainer>
                         </InputDiv>
                     <SubmitButton onClick={handleSignIn}>Sign In</SubmitButton>
+                    <h3>Have a Google account?</h3>
+                    <SignInWGoogle />
                     <NeedAccount>Need to create an account with us?</NeedAccount>
                     <Button2 onClick={goSignUp}>Sign Up</Button2>
                 </InnerShell>

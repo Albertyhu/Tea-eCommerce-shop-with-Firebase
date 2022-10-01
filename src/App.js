@@ -23,7 +23,9 @@ import ReturnProductPage from './screens/productReturn/returnProdPage.js';
 import PostReturnRequest from './screens/productReturn/postReturnRequest.js'; 
 import AboutUsPage from './screens/aboutUs/AboutUs.js'; 
 import CareerPage from './screens/career'; 
+import PostSubmissionPage from './screens/career/PostSubmissionPage.js';
 import RenderSiteMap from './screens/sitemap'; 
+import ContactUsPage from './screens/contact'; 
 
 //firebase code 
 import { db } from './firebase/initializeFirebase.js';
@@ -425,7 +427,23 @@ function App() {
                             openHamburger={hamburgerPanel}
                             accountPanel={accountPanel}
                         />}
-                    />
+                            />
+                        <Route
+                            path='/resume_submitted'
+                            element={<PostSubmissionPage
+                                openPanel={openPanel}
+                                openHamburger={hamburgerPanel}
+                                accountPanel={accountPanel}
+                            />}
+                        />
+                        <Route
+                            path='/contact_us'
+                            element={<ContactUsPage
+                                openPanel={openPanel}
+                                openHamburger={hamburgerPanel}
+                                accountPanel={accountPanel}
+                            />}
+                        />
               </Routes>
           </BrowserRouter>    
       </div>
