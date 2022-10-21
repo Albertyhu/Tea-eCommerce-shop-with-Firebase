@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\base_elements",
-    "\\src\\components",
     "\\src\\firebase",
     "\\src\\screens",
-    "\\src\\screens\\career",
-    "\\src\\screens\\contact",
+    "\\src\\screens\\cart",
+    "\\src\\screens\\product_page",
+    "\\src\\screens\\product_page\\productProfile",
     "\\src\\screens\\sitemap",
+    "\\src\\searchBar",
     "\\src\\style"
   ],
-  "SelectedNode": "\\src\\screens\\nonMember\\signInWGoogle.js",
+  "SelectedNode": "\\package.json",
   "PreviewInSolutionExplorer": false
 }

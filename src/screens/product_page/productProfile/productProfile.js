@@ -79,7 +79,7 @@ const MainContent = props => {
 
 
     useEffect(() => {
-       // console.log(`current id: ${ProductProfileID}`)
+       
         setProductID(ProductProfileID)
     }, [ProductProfileID])
   
